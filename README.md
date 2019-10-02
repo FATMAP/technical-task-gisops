@@ -6,12 +6,10 @@ Thanks for applying to work at FATMAP. We have developed this task for you to wo
 
 We would like you to do the following:
 
-### 1. Create GBDX server component
-The component should accept a `POST` request containing GeoJSON, connect to GBDX and retrieve all matching records from the catalogue, returning GeoJSON to the client. The data returned should contain at a minimum properties representing the GBDX catalogID, platformName and timestamp.
+### 1. Create GeoJSON validating server component
+The component should accept a `POST` request containing GeoJSON, validate the structure of the GeoJSON (either locally or by connecting to and using an online GeoJSON validation service), and return a meaningful JSON response.
 
-The `aoi.geojson` file defines our area of interest and can be used to test the POST endpoint.
-
-**Note:** You will need to create a free evaluation account on the GBDX platform.
+The `aoi.geojson` file can be used to test the POST endpoint.
 
 ### 2. Dockerise the component
 Create `Dockerfile` and `docker-compose.yml` files for the component you have created in Step 1. Running `docker-compose up` should expose the service via a port on your local machine: you should be able to `POST` GeoJSON to the server via this port.
